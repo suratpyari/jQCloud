@@ -362,11 +362,6 @@ jQCloud.prototype = {
                 radius += this.data.step;
                 angle += (index % 2 === 0 ? 1 : -1) * this.data.step;
                 
-                alert(this.options.width);
-                alert(this.options.height);
-                alert(word_size.height);
-                alert(word_size.width);
-                
                 word_size.left = this.options.center.x * this.options.width - (word_size.width / 2.0) + (radius * Math.cos(angle)) * this.data.aspect_ratio;
                 word_size.top = this.options.center.y * this.options.height + radius * Math.sin(angle) - (word_size.height / 2.0);
             }
