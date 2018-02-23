@@ -331,7 +331,7 @@ jQCloud.prototype = {
         word_style.position = 'absolute';
         word_style.left = word_size.left + 'px';
         word_style.top = word_size.top + 'px';
-        
+        alert(word_span.width);
         //word_style.padding = (word_span.offsetWidth-word_span.offsetHeight)/2+10+'px 10px';
         while (this.hitTest(word_size)) {
             // option shape is 'rectangular' so move the word in a rectangular spiral
