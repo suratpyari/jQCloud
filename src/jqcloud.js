@@ -323,7 +323,6 @@ jQCloud.prototype = {
             width: word_span.outerWidth()+10,
             height: word_span.outerHeight()+10
         };
-        word_style.padding = (word_span.width()-word_span.height())/2+10+'px 10px';
         word_size.left = this.options.center.x * this.options.width - word_size.width / 2.0;
         word_size.top = this.options.center.y * this.options.height - word_size.height / 2.0;
 
@@ -332,7 +331,7 @@ jQCloud.prototype = {
         word_style.position = 'absolute';
         word_style.left = word_size.left + 'px';
         word_style.top = word_size.top + 'px';
-        //word_style.padding = (word_span.offsetWidth-word_span.offsetHeight)/2+10+'px 10px';
+        word_style.padding = (word_span.width()-word_span.height())/2+10+'px 10px';
         while (this.hitTest(word_size)) {
             // option shape is 'rectangular' so move the word in a rectangular spiral
             if (this.options.shape === 'rectangular') {
