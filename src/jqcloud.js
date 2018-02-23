@@ -245,7 +245,6 @@ jQCloud.prototype = {
 
     // Function to draw a word, by moving it in spiral until it finds a suitable empty place
     drawOneWord: function(index, word) {
-        alert(1);
         var word_id = this.data.namespace + index,
             word_selector = '#' + word_id,
 
@@ -283,7 +282,6 @@ jQCloud.prototype = {
         if (this.data.colors.length) {
             word_span.css('color', this.data.colors[weight - 1]);
         }
-        alert(2);
         // Apply color from word property
         if (word.color) {
             word_span.css('color', word.color);
@@ -322,8 +320,8 @@ jQCloud.prototype = {
         this.$element.append(word_span);
 
         word_size = {
-            width: word_span.outerWidth(),
-            height: word_span.outerHeight()
+            width: word_span.outerWidth()+10,
+            height: word_span.outerWidth()+10
         };
         word_size.left = this.options.center.x * this.options.width - word_size.width / 2.0;
         word_size.top = this.options.center.y * this.options.height - word_size.height / 2.0;
@@ -333,12 +331,8 @@ jQCloud.prototype = {
         word_style.position = 'absolute';
         word_style.left = word_size.left + 'px';
         word_style.top = word_size.top + 'px';
-        alert(3);
-        alert(word_span.offsetWidth);
-        alert(word_span.offsetHeight);
-        alert((word_span.offsetWidth-word_span.offsetHeight)/2+10+'px 10px');
         
-        word_style.padding = (word_span.offsetWidth-word_span.offsetHeight)/2+10+'px 10px';
+        //word_style.padding = (word_span.offsetWidth-word_span.offsetHeight)/2+10+'px 10px';
         while (this.hitTest(word_size)) {
             // option shape is 'rectangular' so move the word in a rectangular spiral
             if (this.options.shape === 'rectangular') {
