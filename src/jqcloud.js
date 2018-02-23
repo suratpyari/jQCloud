@@ -286,7 +286,8 @@ jQCloud.prototype = {
         if (word.color) {
             word_span.css('color', word.color);
         }
-
+        var bg_colors = ["#bdc3c7","#6f7b87","#2c3e50","#2f3193","#662d91","#922790","#ec2176","#ed1c24","#f36622","#f8941e","#fab70f","#fdde00","#d1d219","#8ec73f","#00a650","#00aa9c","#00adef","#0081cd","#005bab"];
+        word_span.css('background-color', bg_colors[Math.floor(Math.random()*bg_colors.length)]);
         // Apply size
         if (this.data.sizes.length) {
             word_span.css('font-size', this.data.sizes[weight - 1]);
