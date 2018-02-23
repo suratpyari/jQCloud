@@ -321,7 +321,7 @@ jQCloud.prototype = {
 
         word_size = {
             width: word_span.outerWidth()+10,
-            height: word_span.outerHeight()+10
+            height: word_span.outerWidth()+10
         };
         word_size.left = this.options.center.x * this.options.width - word_size.width / 2.0;
         word_size.top = this.options.center.y * this.options.height - word_size.height / 2.0;
