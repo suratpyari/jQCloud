@@ -321,9 +321,9 @@ jQCloud.prototype = {
 
         word_size = {
             width: word_span.outerWidth()+10,
-            height: word_span.outerWidth()+10
+            height: word_span.outerHeight()+10
         };
-        alert(word_span.width());
+        word_style.padding = (word_span.width()-word_span.height())/2+10+'px 10px';
         word_size.left = this.options.center.x * this.options.width - word_size.width / 2.0;
         word_size.top = this.options.center.y * this.options.height - word_size.height / 2.0;
 
